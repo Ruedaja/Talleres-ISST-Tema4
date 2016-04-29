@@ -59,6 +59,18 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/crearMemoria</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+        <servlet-name>EnviarEmailServlet</servlet-name>
+        <servlet-class>es.upm.dit.isst.tfg.EnviarEmailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EnviarEmailServlet</servlet-name>
+        <url-pattern>/_ah/mail/tfg@isst-15-16-t4.appspotmail.com</url-pattern>
+    </servlet-mapping>
+	
+    <inbound-services>
+  <service>mail</service>
+    </inbound-services>
 		
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
